@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<structMap TYPE="MIXED">
+    <div TYPE="CITATION">
+        <div ORDER="1" TYPE="PAGE">
+            <file mimetype="text/plain">46296440</file>
+        </div>
+        <div ORDER="2" TYPE="PAGE">
+            <file mimetype="text/plain">46296441</file>
+        </div>
+        <div ORDER="3" TYPE="PAGE">
+            <file mimetype="text/plain">46296442</file>
+        </div>
+    </div>
+</structMap>

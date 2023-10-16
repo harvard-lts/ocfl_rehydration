@@ -1,0 +1,13 @@
+*~
+input/
+output/
+__pycache__
+.env
+*.swp
+output-1000/
+.aws/
+
+.vscode/
+ocfl_rehydration.egg-info/
+notes.txt
+
