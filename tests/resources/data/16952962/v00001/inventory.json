@@ -1,0 +1,36 @@
+{
+  "id" : "URN-3:HUL.DRS.OBJECT:16952962",
+  "type" : "https://ocfl.io/1.0/spec/#inventory",
+  "digestAlgorithm" : "sha512",
+  "head" : "v00001",
+  "contentDirectory" : "content",
+  "fixity" : { },
+  "manifest" : {
+    "40ae77717997de66576e82d6916c951c43e6f19e9d178be9944b3db652ee52002350ba2d89611542ee4f3127a6aaea3a979cb4b16891ca07916e7e1c0b5b9bc8" : [ "v00001/content/metadata/46296439_structureMap.xml" ],
+    "477c41b093218a2f3d9cde222c2f5c476ef23b8936c8cd10420d8e4df7cefe2d9f26060fdcb503c7af322eac8d0d0bd6f549fbc177968479bcf4fc30dc979752" : [ "v00001/content/descriptor/46296439_mets.xml" ],
+    "5b7067134fe258f03af9635a2f031bdfafeecc4255c157a331546ca5fcb42683b90dc1eea3155c61a1c132c6fdbf7e57d66dd2b001ff9aacc57170afc0205cd6" : [ "v00001/content/data/46296442.txt" ],
+    "78add2a89d5ae6388fe30657a31b05b8bd2f3487636b8e494274b382cdf58bf2a7cff08e166a443a000ff2da5553e717b588b56828229e70c5077b1d13eb2d99" : [ "v00001/content/data/46296441.txt" ],
+    "a29b16012ed452d38671e2e3900c0fbd3950f71525f7b4046bf88f0d1f5ead401141f21155aa7ab8748a57b3d75fae0fa0de84228f07443bad8624dc0df40e6d" : [ "v00001/content/metadata/46296440_textMD.xml" ],
+    "f90ddd77e400dfe6a3fcf479b00b1ee29e7015c5bb8cd70f5f15b4886cc339275ff553fc8a053f8ddc7324f45168cffaf81f8c3ac93996f6536eef38e5e40768" : [ "v00001/content/data/46296440.txt" ],
+    "fad537f28838500f1e232b980a3123852a0c60e1a57b22e505076a622b084dab01c67383f3df17274d771b2f2e0f6a1c38eb19a66512bc85dd432dbac7cf34a7" : [ "v00001/content/metadata/46296442_textMD.xml" ]
+  },
+  "versions" : {
+    "v00001" : {
+      "created" : "2021-07-10T16:23:04.013196Z",
+      "message" : "PREMIS:refreshment",
+      "user" : {
+        "name" : "DRS Migrator/2.0.1",
+        "address" : "http://id.lib.harvard.edu/wordshack/software/229840"
+      },
+      "state" : {
+        "40ae77717997de66576e82d6916c951c43e6f19e9d178be9944b3db652ee52002350ba2d89611542ee4f3127a6aaea3a979cb4b16891ca07916e7e1c0b5b9bc8" : [ "metadata/46296439_structureMap.xml" ],
+        "477c41b093218a2f3d9cde222c2f5c476ef23b8936c8cd10420d8e4df7cefe2d9f26060fdcb503c7af322eac8d0d0bd6f549fbc177968479bcf4fc30dc979752" : [ "descriptor/46296439_mets.xml" ],
+        "5b7067134fe258f03af9635a2f031bdfafeecc4255c157a331546ca5fcb42683b90dc1eea3155c61a1c132c6fdbf7e57d66dd2b001ff9aacc57170afc0205cd6" : [ "data/46296442.txt" ],
+        "78add2a89d5ae6388fe30657a31b05b8bd2f3487636b8e494274b382cdf58bf2a7cff08e166a443a000ff2da5553e717b588b56828229e70c5077b1d13eb2d99" : [ "data/46296441.txt" ],
+        "a29b16012ed452d38671e2e3900c0fbd3950f71525f7b4046bf88f0d1f5ead401141f21155aa7ab8748a57b3d75fae0fa0de84228f07443bad8624dc0df40e6d" : [ "metadata/46296440_textMD.xml" ],
+        "f90ddd77e400dfe6a3fcf479b00b1ee29e7015c5bb8cd70f5f15b4886cc339275ff553fc8a053f8ddc7324f45168cffaf81f8c3ac93996f6536eef38e5e40768" : [ "data/46296440.txt" ],
+        "fad537f28838500f1e232b980a3123852a0c60e1a57b22e505076a622b084dab01c67383f3df17274d771b2f2e0f6a1c38eb19a66512bc85dd432dbac7cf34a7" : [ "metadata/46296441_textMD.xml", "metadata/46296442_textMD.xml" ]
+      }
+    }
+  }
+}

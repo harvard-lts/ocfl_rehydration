@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<structMap TYPE="MIXED">
+    <div TYPE="CITATION">
+        <div LABEL="page [1]" ORDER="1" ORDERLABEL="[1]" TYPE="PAGE">
+            <file mimetype="image/tiff">1031495</file>
+            <file mimetype="text/plain">1031496</file>
+        </div>
+        <div LABEL="page 2" ORDER="2" ORDERLABEL="2" TYPE="PAGE">
+            <file mimetype="text/plain">1031498</file>
+            <file mimetype="image/tiff">1031497</file>
+        </div>
+        <div LABEL="page 3" ORDER="3" ORDERLABEL="3" TYPE="PAGE">
+            <file mimetype="image/tiff">1031499</file>
+            <file mimetype="text/plain">1031500</file>
+        </div>
+        <div LABEL="page 4" ORDER="4" ORDERLABEL="4" TYPE="PAGE">
+            <file mimetype="text/plain">1031502</file>
+            <file mimetype="image/tiff">1031501</file>
+        </div>
+        <div LABEL="page 5" ORDER="5" ORDERLABEL="5" TYPE="PAGE">
+            <file mimetype="text/plain">1031504</file>
+            <file mimetype="image/tiff">1031503</file>
+        </div>
+        <div LABEL="page 6" ORDER="6" ORDERLABEL="6" TYPE="PAGE">
+            <file mimetype="image/tiff">1031505</file>
+            <file mimetype="text/plain">1031506</file>
+        </div>
+    </div>
+</structMap>
