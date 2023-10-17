@@ -55,14 +55,37 @@ class OcflInventory():
         Raises:
         - Exception: If the data file is not found.
         """
-        path_regex = r'^v[0-9]{5}/content/data/' + file_id + r'.*'
-        manifest_files = self._get_manifest_files(path_regex)
+        path_regex = r'^data/' + file_id + r'.*'
+        digest = self._get_state_files_digest(path_regex=path_regex, version=None)
+        return self._get_manifest_path(digest)
 
-        if len(manifest_files) > 0:
-            return sorted(manifest_files, reverse=True)[0]
 
-        raise Exception("not-found, data file for: {}".format(file_id))
+    def _get_state_files_digest(self, path_regex, version):
+        if version is None:
+            version = self.inventory['head']
 
+        state = self.inventory['versions'][version]['state']
+
+        if not isinstance(state, dict):
+            raise Exception('Invalid state')
+
+        for digest in state:
+            for file in state[digest].split():
+                if (re.search(path_regex, file)):
+                    return digest
+
+        raise Exception("not-found, state file digest for: {} : {}".format(version, path_regex))
+
+    def _get_manifest_path(self, digest):
+        manifest = self.inventory['manifest']
+
+        if not isinstance(manifest, dict):
+            raise Exception('Invalid manifest')
+
+        for file in manifest[digest]:
+            return file
+
+        raise Exception("not-found, manifest file for digest: {}".format(digest))
 
     def _get_manifest_files(self, path_regex):
         """
