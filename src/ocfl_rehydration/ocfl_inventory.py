@@ -70,10 +70,9 @@ class OcflInventory():
             raise Exception('Invalid state')
 
         for digest in state:
-            for file_list in state[digest]:
-                for file in file_list:
-                    if (re.search(path_regex, file)):
-                        return digest
+            for file in state[digest]:
+                if (re.search(path_regex, file)):
+                    return digest
 
         raise Exception("not-found, state file digest for: {} : {}".format(version, path_regex))
 
