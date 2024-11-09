@@ -1,6 +1,6 @@
 import setuptools
 setuptools.setup(name='ocfl_rehydration',
-version='0.1',
+version='0.2',
 description='Tooling for rehydrating an original DRS object from its OCFL form',
 url='https://github.com/harvard-lts/ocfl_rehydration',
 author='Andrew Woods',

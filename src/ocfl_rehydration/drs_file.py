@@ -10,7 +10,22 @@ class DrsFile:
         self.file_id = ""
         self.file_name = ""
         self.file_dir = ""
+        self.digest_alg = ""
+        self.digest_value = ""
+        self.mime_type = ""
         self.amd_ids = []
+
+    def __repr__(self):
+        """
+        Returns a string representation of this object.
+        """
+        return "DrsFile: id={}, file_name={}, file_dir={}, digest_alg={}, "\
+               "digest_value={}, mime_type={}".format(self.file_id,
+                                                      self.file_name,
+                                                      self.file_dir,
+                                                      self.digest_alg,
+                                                      self.digest_value,
+                                                      self.mime_type)
 
     def get_id(self):
         """
@@ -52,6 +67,33 @@ class DrsFile:
         """
         self.amd_ids.append(amd_id)
 
+    def get_digest_alg(self):
+        """
+        Returns the digest algorithm used for this file.
+
+        Returns:
+            str: The digest algorithm used for this file.
+        """
+        return self.digest_alg
+
+    def get_digest_value(self):
+        """
+        Returns the digest value for this file.
+
+        Returns:
+            str: The digest value for this file.
+        """
+        return self.digest_value
+
+    def get_mime_type(self):
+        """
+        Returns the mime type for this file.
+
+        Returns:
+            str: The mime type for this file.
+        """
+        return self.mime_type
+
     def set_id(self, file_id):
         """
         Sets the id of this file.
@@ -78,3 +120,30 @@ class DrsFile:
             file_dir (str): The directory containing the file.
         """
         self.file_dir = file_dir
+
+    def set_digest_alg(self, digest_alg):
+        """
+        Sets the digest algorithm used for this file.
+
+        Args:
+            digest_alg (str): The digest algorithm used for this file.
+        """
+        self.digest_alg = digest_alg
+
+    def set_digest_value(self, digest_value):
+        """
+        Sets the digest value for this file.
+
+        Args:
+            digest_value (str): The digest value for this file.
+        """
+        self.digest_value = digest_value
+
+    def set_mime_type(self, mime_type):
+        """
+        Sets the mime type for this file.
+
+        Args:
+            mime_type (str): The mime type for this file.
+        """
+        self.mime_type = mime_type
