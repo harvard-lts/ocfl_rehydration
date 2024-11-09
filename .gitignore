@@ -6,6 +6,8 @@ __pycache__
 *.swp
 output-1000/
 .aws/
+dist/
+myenv/
 
 .vscode/
 ocfl_rehydration.egg-info/

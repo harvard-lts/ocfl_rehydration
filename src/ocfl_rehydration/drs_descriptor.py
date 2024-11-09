@@ -9,6 +9,7 @@ class DrsDescriptor():
     "hulDrsAdmin" : "{http://hul.harvard.edu/ois/xml/ns/hulDrsAdmin}",
     "premis" : "{info:lc/xmlns/premis-v2}",
     "xsi" : "{http://www.w3.org/2001/XMLSchema-instance}",
+    "fits" : "{http://hul.harvard.edu/ois/xml/ns/fits/fits_output}"
   }
   
   def __init__(self, descriptor_file):
@@ -68,12 +69,15 @@ class DrsDescriptor():
       amd_premis_file = self._amdSec_premis_file(amd_secs, amd_id)
       if amd_premis_file is not None:
         drs_file.set_id(amd_premis_file.find('.//{}objectIdentifierValue'.format(self.NSMAP['premis'])).text)
+        drs_file.set_digest_alg(amd_premis_file.find('.//{}messageDigestAlgorithm'.format(self.NSMAP['premis'])).text)
+        drs_file.set_digest_value(amd_premis_file.find('.//{}messageDigest'.format(self.NSMAP['premis'])).text)
         continue
 
       amd_drs_file = self._amdSec_drs_file(amd_secs, amd_id)
       if amd_drs_file is not None:
         drs_file.set_file_name(amd_drs_file.find('.//{}suppliedFilename'.format(self.NSMAP['hulDrsAdmin'])).text)
         drs_file.set_file_dir(amd_drs_file.find('.//{}suppliedDirectory'.format(self.NSMAP['hulDrsAdmin'])).text)
+        drs_file.set_mime_type(amd_drs_file.find('.//{}identity'.format(self.NSMAP['fits'])).get('mimetype'))
         continue
 
     return drs_file 
