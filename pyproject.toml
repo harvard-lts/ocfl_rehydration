@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ocfl_rehydration"
-version = "1.1.0"
+version = "1.1.1"
 description = "Utility for reconstituting OCFL objects"
 readme = "README.md"
 authors = [{ name = "Andrew Woods", email = "awoods01@gmail.com" }]
