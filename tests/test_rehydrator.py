@@ -42,3 +42,10 @@ def test_rehydrate(rehydrator, expected_files, output_dir, batch_name):
         assert os.path.exists(os.path.join(output_dir, batch_name, expected_file))
 
     shutil.rmtree(output_dir)
+
+
+def test_clean_path(rehydrator):
+    assert rehydrator._clean_path('/some/path') == 'some/path'
+    assert rehydrator._clean_path('some/path') == 'some/path'
+    assert rehydrator._clean_path('//some/path') == 'some/path'
+    assert rehydrator._clean_path('') == ''

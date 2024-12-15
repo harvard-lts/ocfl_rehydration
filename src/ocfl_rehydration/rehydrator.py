@@ -74,7 +74,24 @@ class Rehydrator():
         for file_id, drs_file in drs_descriptor.files.items():
             data_path = ocfl_inventory.get_data_path(file_id)
             input_data_path = os.path.join(self.ocfl_obj_root, data_path)
-            output_dir = os.path.join(output_batch_dir, drs_file.get_file_dir())
+
+            file_dir = self._clean_path(drs_file.get_file_dir())
+            output_dir = os.path.join(output_batch_dir, file_dir)
             output_file_path = os.path.join(output_dir, drs_file.get_file_name())
             os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
             shutil.copyfile(input_data_path, output_file_path)
+
+    def _clean_path(self, file_dir):
+        """
+        Gets a path that omits any leading slashes.
+
+        Args:
+            file_dir (str): The path to clean up.
+
+        Returns:
+            str: The cleaned up path.
+        """
+        while file_dir.startswith('/'):
+            file_dir = file_dir[1:]  # Remove the leading slash if present
+
+        return file_dir
